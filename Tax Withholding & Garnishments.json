@@ -1,0 +1,301 @@
+{
+  "name": "Tax Withholding & Garnishments",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1600,
+        32
+      ],
+      "id": "08cd4612-fb35-45d6-9eb6-46343fb9a5e8",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=You are an expert tax data analyst. Your task is to meticulously extract income tax withholding information from the provided text {{ $json.text }} for different states\n\nYour goal is to identify all pay periods (e.g., Weekly, Biweekly, Monthly), filing statuses (e.g., Single, Married), and the corresponding wage brackets for each. For every wage bracket, you must parse the specific withholding tax calculation.\n\nFinally, you will consolidate all extracted information into a single, comprehensive Markdown table. The table must have the following columns:\n\nFiling Status: The filing status for the given row (e.g., Single, Married).\n\nPay Period: The pay frequency (e.g., Weekly, Biweekly, Semimonthly, Monthly).\n\nWage Range: The income bracket for the withholding calculation (e.g., \"Over $3,001 up to $5,000\").\n\nWithholding Calculation: The exact formula for calculating the withholding tax (e.g., \"$15.50 plus 5.5% of the excess over $500\").\n\nProcess the text thoroughly and ensure every table and wage bracket is accounted for. Your final output should be only the HTML table as shown below, without any additional commentary or explanation.\n\n<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Tax Withholding Table</title>\n    <script src=\"https://cdn.tailwindcss.com\"></script>\n    <link href=\"https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap\" rel=\"stylesheet\">\n    <style>\n        body {\n            font-family: 'Inter', sans-serif;\n        }\n    </style>\n</head>\n<body class=\"bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100\">\n\n    <div class=\"container mx-auto p-4 sm:p-6 lg:p-8\">\n        <h1 class=\"text-2xl sm:text-3xl font-bold text-center mb-6\">Tax Withholding Information for XYZ {prefill state information from the text} state</h1>\n        \n        <!-- This container makes the table responsive and prevents it from overflowing on small screens -->\n        <div class=\"overflow-x-auto bg-white dark:bg-gray-800 rounded-lg shadow-md\">\n            <table class=\"min-w-full divide-y divide-gray-200 dark:divide-gray-700\">\n                <thead class=\"bg-gray-50 dark:bg-gray-700\">\n                    <tr>\n                        <th scope=\"col\" class=\"px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider\">\n                            Filing Status\n                        </th>\n                        <th scope=\"col\" class=\"px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider\">\n                            Pay Period\n                        </th>\n                        <th scope=\"col\" class=\"px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider\">\n                            Wage Range (Annualized Taxable Income)\n                        </th>\n                        <th scope=\"col\" class=\"px-6 py-3 text-left text-xs font-medium text-gray-500 dark:text-gray-300 uppercase tracking-wider\">\n                            Withholding Calculation (for Annualized Tax)\n                        </th>\n                    </tr>\n                </thead>\n                <tbody class=\"bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700\">\n                    <tr>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white\">\n                            Single / Married Filing Separately\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            All\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            Not over $3,000\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            2% of taxable income\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white\">\n                            Single / Married Filing Separately\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            All\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            Over $3,000 up to $5,000\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            $60.00 plus 3% of the excess over $3,000\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white\">\n                            Single / Married Filing Separately\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            All\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            Over $5,000 up to $17,000\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            $120.00 plus 5% of the excess over $5,000\n                        </td>\n                    </tr>\n                    <tr>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900 dark:text-white\">\n                            Single / Married Filing Separately\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            All\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            Over $17,000\n                        </td>\n                        <td class=\"px-6 py-4 whitespace-nowrap text-sm text-gray-500 dark:text-gray-300\">\n                            $720.00 plus 5.75% of the excess over $17,000\n                        </td>\n                    </tr>\n                </tbody>\n            </table>\n        </div>\n    </div>\n\n</body>\n</html>\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        -704,
+        32
+      ],
+      "id": "a8e8512b-e583-452a-ab72-d91219064998",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -672,
+        256
+      ],
+      "id": "10e215ad-79f4-411b-bb28-20272e0e1dc1",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "85Zg1hGFfqGR8t0g",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $execution.id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -544,
+        256
+      ],
+      "id": "24527723-ea77-46e9-951a-0c9a2e2fb08d",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -1152,
+        -160
+      ],
+      "id": "b720b39c-2392-49c7-b561-ee11e6ec4d52",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "url": "https://www.tax.virginia.gov/sites/default/files/taxforms/withholding/any/employer-withholding-tables-july-2025-and-later-any.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1376,
+        -160
+      ],
+      "id": "39cc8447-0e08-4c50-b5e4-de77ba6093b8",
+      "name": "Virginia"
+    },
+    {
+      "parameters": {
+        "url": "https://www.tax.nd.gov/sites/www/files/documents/misc-discuss-folder/Final_2025%20Income%20Tax%20Withholding%20Rates%20%20Instructions.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1376,
+        32
+      ],
+      "id": "88a0a8fe-a95d-41d5-8a86-f20615a4d5d6",
+      "name": "North Dakota"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -1152,
+        32
+      ],
+      "id": "714ecb2e-5d0d-4d51-9595-4eab220c0f22",
+      "name": "Extract from File1"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        -928,
+        16
+      ],
+      "id": "2fde66d3-53d6-4110-b575-a374b065200d",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "url": "https://portal.ct.gov/-/media/drs/publications/pubsip/2025/ip-2025-1.pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1376,
+        224
+      ],
+      "id": "f965da31-9476-4f19-bda7-5b28c20135bf",
+      "name": "Connecticut"
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -1152,
+        224
+      ],
+      "id": "d16b7e90-20f9-4340-8431-4381b5f5b4d5",
+      "name": "Extract from File2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Virginia",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "North Dakota",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Connecticut",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        []
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Virginia": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "North Dakota": {
+      "main": [
+        [
+          {
+            "node": "Extract from File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Connecticut": {
+      "main": [
+        [
+          {
+            "node": "Extract from File2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "129795ae-9d4e-4901-9d3b-f75d4a82e703",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "75ebb32ec954114dbe8db4777714e54d9c58767ea1c969253cd235fb3e100217"
+  },
+  "id": "HX9Y4eOp30uiK6hh",
+  "tags": []
+}
