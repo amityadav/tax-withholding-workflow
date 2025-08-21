@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Withholding Systems: Options Analysis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-title {
+            border-bottom: 2px solid #6366F1; /* Indigo-500 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .icon-bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+        .pro-icon {
+            background-color: #ECFDF5; /* Green-50 */
+            color: #10B981; /* Green-500 */
+        }
+        .con-icon {
+            background-color: #FEF2F2; /* Red-50 */
+            color: #EF4444; /* Red-500 */
+        }
+        .recommendation {
+            border-left: 4px solid #34D399; /* Green-400 */
+            background-color: #F0FDF4; /* Green-50 */
+        }
+        .flowchart-node {
+            background-color: #EEF2FF; /* Indigo-50 */
+            border: 2px solid #818CF8; /* Indigo-400 */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        .flowchart-arrow {
+            position: absolute;
+            color: #6366F1; /* Indigo-500 */
+            font-size: 2rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 sm:p-6 md:p-8">
+    <div class="max-w-7xl mx-auto">
+
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Tax Withholding Systems</h1>
+            <p class="mt-4 text-lg sm:text-xl text-indigo-600 font-semibold">An Options Analysis for Solutions Architects</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Option 1: SaaS Platforms -->
+            <section class="card p-6 md:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="icon-bg bg-indigo-100 text-indigo-600 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Option 1: SaaS Platforms</h2>
+                        <p class="text-gray-500">Leverage third-party tax compliance experts.</p>
+                    </div>
+                </div>
+                <p class="mb-6">Key Players: <span class="font-semibold">Vertex, Workday, ADP, Oracle ERP</span></p>
+
+                <!-- Pros -->
+                <h3 class="font-semibold text-lg mb-4 text-green-600">Pros</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <div class="icon-bg pro-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div><strong class="block">High Accuracy & Compliance:</strong> Vendors are dedicated to staying current with all tax laws, minimizing risk.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg pro-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
+                        <div><strong class="block">Reduced Internal Burden:</strong> All updates, maintenance, and support are handled by the vendor.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg pro-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 11l5-5m0 0l5 5m-5-5v12" /></svg></div>
+                        <div><strong class="block">Scalability & Integration:</strong> Easily scales with business growth and integrates with existing HR systems.</div>
+                    </li>
+                </ul>
+
+                <!-- Cons -->
+                <h3 class="font-semibold text-lg mb-4 text-red-600">Cons</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="icon-bg con-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01" /></svg></div>
+                        <div><strong class="block">Ongoing Costs:</strong> Significant recurring subscription fees (Total Cost of Ownership can be high).</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg con-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6.364-6.364l-1.414 1.414M21 12h-2M4 12H2m15.364-6.364l-1.414-1.414M6.343 6.343L4.929 4.929M12 3v2m0 16v-2m6.364-2.636l-1.414-1.414M4.929 19.071l1.414-1.414" /></svg></div>
+                        <div><strong class="block">Limited Customization:</strong> You are confined to the vendor's features and predetermined workflows.</div>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Option 2: Home-Grown Solution -->
+            <section class="card p-6 md:p-8">
+                <div class="flex items-center mb-6">
+                    <div class="icon-bg bg-amber-100 text-amber-600 mr-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86l-2.387-.477a2 2 0 00-1.806.547a2 2 0 00-.547 1.806l.477 2.387a6 6 0 00.517 3.86l.158.318a6 6 0 00.517 3.86l2.387.477a2 2 0 001.806-.547a2 2 0 00.547-1.806l-.477-2.387a6 6 0 00-.517-3.86l-.158-.318a6 6 0 00-.517-3.86z" /></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-gray-900">Option 2: Home-Grown Solution</h2>
+                        <p class="text-gray-500">Build a custom data scraping workflow.</p>
+                    </div>
+                </div>
+                <p class="mb-6">Involves creating automated processes to fetch data from all 50 state websites.</p>
+
+                <!-- Pros -->
+                <h3 class="font-semibold text-lg mb-4 text-green-600">Pros</h3>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start">
+                        <div class="icon-bg pro-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg></div>
+                        <div><strong class="block">Complete Control:</strong> Solution can be tailored precisely to your business needs and workflows.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg pro-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg></div>
+                        <div><strong class="block">Potential Cost Savings:</strong> Avoids recurring subscription fees, which can be beneficial long-term.</div>
+                    </li>
+                </ul>
+
+                <!-- Cons -->
+                <h3 class="font-semibold text-lg mb-4 text-red-600">Cons</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <div class="icon-bg con-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg></div>
+                        <div><strong class="block">Extreme Compliance Risk:</strong> A broken scraper leads to outdated data, risking severe penalties.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg con-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
+                        <div><strong class="block">Massive Maintenance Burden:</strong> State websites change constantly, requiring continuous monitoring and updates.</div>
+                    </li>
+                    <li class="flex items-start">
+                        <div class="icon-bg con-icon mr-4 flex-shrink-0"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7.014A8.003 8.003 0 0117.657 18.657z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1014.12 11.88l-4.242 4.242a3 3 0 000 4.242z" /></svg></div>
+                        <div><strong class="block">High Initial Development Cost:</strong> Building a robust, multi-state scraping solution is complex and expensive.</div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Head-to-Head Comparison -->
+        <section class="mt-12 card p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-8 section-title">Head-to-Head Comparison</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="p-4 text-lg font-semibold">Factor</th>
+                            <th class="p-4 text-lg font-semibold text-center text-indigo-600">SaaS Platforms</th>
+                            <th class="p-4 text-lg font-semibold text-center text-amber-600">Home-Grown Solution</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 font-medium">Initial Cost</td>
+                            <td class="p-4 text-center"><span class="bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full">Low</span></td>
+                            <td class="p-4 text-center"><span class="bg-red-100 text-red-800 font-bold py-1 px-3 rounded-full">Very High</span></td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 font-medium">Ongoing Cost</td>
+                            <td class="p-4 text-center"><span class="bg-red-100 text-red-800 font-bold py-1 px-3 rounded-full">High</span></td>
+                            <td class="p-4 text-center"><span class="bg-yellow-100 text-yellow-800 font-bold py-1 px-3 rounded-full">Moderate</span></td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 font-medium">Compliance Risk</td>
+                            <td class="p-4 text-center"><span class="bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full">Very Low</span></td>
+                            <td class="p-4 text-center"><span class="bg-red-100 text-red-800 font-bold py-1 px-3 rounded-full">Very High</span></td>
+                        </tr>
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 font-medium">Maintenance Burden</td>
+                            <td class="p-4 text-center"><span class="bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full">None</span></td>
+                            <td class="p-4 text-center"><span class="bg-red-100 text-red-800 font-bold py-1 px-3 rounded-full">Very High</span></td>
+                        </tr>
+                        <tr>
+                            <td class="p-4 font-medium">Time to Implement</td>
+                            <td class="p-4 text-center"><span class="bg-green-100 text-green-800 font-bold py-1 px-3 rounded-full">Fast</span></td>
+                            <td class="p-4 text-center"><span class="bg-red-100 text-red-800 font-bold py-1 px-3 rounded-full">Slow</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Recommendation -->
+        <section class="mt-12 recommendation p-6 rounded-lg">
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Architect's Recommendation</h2>
+            <p class="text-lg text-gray-700">For a mission-critical function like tax compliance, the risks of a home-grown solution far outweigh the potential benefits. The complexity, maintenance overhead, and severe consequences of failure make it an untenable choice.</p>
+            <p class="mt-4 text-xl font-bold text-green-700">Adopt a reputable SaaS Platform to ensure accuracy, minimize risk, and maintain compliance.</p>
+        </section>
+
+        <!-- Home-Grown Solution Design -->
+        <section class="mt-12 card p-6 md:p-8">
+            <h2 class="text-2xl font-bold text-center text-gray-900 mb-8 section-title">Illustrative Home-Grown Architecture</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-8 text-sm md:text-base">
+                <div class="flowchart-node w-48">
+                    <h3 class="font-bold text-indigo-800">Web Crawlers (50 States)</h3>
+                    <p class="text-gray-600">Scheduled scripts to fetch data</p>
+                </div>
+                <div class="hidden md:block text-indigo-500 text-3xl font-bold">&rarr;</div>
+                 <div class="md:hidden text-indigo-500 text-3xl font-bold">&darr;</div>
+                <div class="flowchart-node w-48">
+                    <h3 class="font-bold text-indigo-800">Extraction & Normalization Engine</h3>
+                    <p class="text-gray-600">Parses HTML/PDFs into a standard format</p>
+                </div>
+                 <div class="hidden md:block text-indigo-500 text-3xl font-bold">&rarr;</div>
+                 <div class="md:hidden text-indigo-500 text-3xl font-bold">&darr;</div>
+                <div class="flowchart-node w-48">
+                    <h3 class="font-bold text-indigo-800">Data Storage</h3>
+                    <p class="text-gray-600">Relational DB for normalized tax data</p>
+                </div>
+                 <div class="hidden md:block text-indigo-500 text-3xl font-bold">&rarr;</div>
+                 <div class="md:hidden text-indigo-500 text-3xl font-bold">&darr;</div>
+                <div class="flowchart-node w-48">
+                    <h3 class="font-bold text-indigo-800">Calculation Engine & API</h3>
+                    <p class="text-gray-600">Exposes tax calculations to internal systems</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Payroll Tax Withholding — C‑Suite Options Infographic</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <style>
+    .glass{backdrop-filter:blur(10px)}
+    .shadow-smooth{box-shadow:0 10px 30px rgba(2,8,23,.08)}
+    .score-pill{height:8px}
+    .score-pill>span{display:block;height:100%;border-radius:9999px;background-image:linear-gradient(90deg,#06b6d4,#22c55e,#f59e0b)}
+    .sticky-head th{position:sticky;top:0;background:#fff}
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <!-- HERO -->
+  <header class="relative">
+    <div class="absolute inset-0 bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400"></div>
+    <div class="relative max-w-7xl mx-auto px-6 py-10 text-white">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div class="flex items-start gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-white/20 grid place-items-center shadow-smooth">
+            <i class="fa-solid fa-scale-balanced text-2xl"></i>
+          </div>
+          <div>
+            <h1 class="text-3xl md:text-4xl font-black leading-tight">Payroll Tax Withholding — Options Analysis</h1>
+            <p class="text-sm md:text-base mt-1 text-white/90">U.S. federal, state & local withholding: update content, calculate, and integrate at enterprise scale.</p>
+            <div class="mt-3 flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-2 bg-white/15 px-3 py-1.5 rounded-full text-xs glass"><i class="fa-solid fa-wand-magic-sparkles"></i> Recommended: <b>Home‑grown workflow</b></span>
+              <span class="inline-flex items-center gap-2 bg-white/15 px-3 py-1.5 rounded-full text-xs glass"><i class="fa-solid fa-shield-halved"></i> Audit‑ready</span>
+              <span class="inline-flex items-center gap-2 bg-white/15 px-3 py-1.5 rounded-full text-xs glass"><i class="fa-solid fa-link"></i> Low lock‑in</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white/15 rounded-2xl p-4 grid grid-cols-3 gap-4 text-center glass shadow-smooth">
+          <div>
+            <div class="text-2xl font-extrabold">50</div>
+            <div class="text-xs uppercase tracking-wide">States covered</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold">24h</div>
+            <div class="text-xs uppercase tracking-wide">Update SLA</div>
+          </div>
+          <div>
+            <div class="text-2xl font-extrabold">99.9%</div>
+            <div class="text-xs uppercase tracking-wide">Calc accuracy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 -mt-6">
+    <!-- EXEC SUMMARY -->
+    <section class="bg-white rounded-3xl p-6 md:p-8 shadow-smooth border border-slate-100">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 grid place-items-center"><i class="fa-solid fa-lightbulb"></i></div>
+        <div>
+          <h2 class="text-2xl font-bold">Executive Summary</h2>
+          <p class="text-slate-600 mt-2">Build a <strong>home‑grown content ingestion & calculation workflow</strong> with disciplined governance. You’ll maximize transparency, custom policy overlays, and portability while keeping costs predictable.</p>
+          <ul class="grid md:grid-cols-3 gap-3 mt-4">
+            <li class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100"><b class="text-emerald-700">Why this:</b> control, explainability, flexible overrides.</li>
+            <li class="p-4 rounded-2xl bg-amber-50 border border-amber-100"><b class="text-amber-700">Mind the risks:</b> content ops, locality mapping, QA.</li>
+            <li class="p-4 rounded-2xl bg-fuchsia-50 border border-fuchsia-100"><b class="text-fuchsia-700">Mitigation:</b> golden tests, versioned releases, geo data.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CRITERIA RIBBONS -->
+    <section class="mt-8 grid md:grid-cols-5 gap-4">
+      <div class="p-4 rounded-2xl border border-slate-200 bg-white"><span class="text-xs font-semibold text-slate-500">1</span><h3 class="font-semibold">Coverage</h3><p class="text-slate-600 text-sm">Fed / State / Local + reciprocity</p></div>
+      <div class="p-4 rounded-2xl border border-slate-200 bg-white"><span class="text-xs font-semibold text-slate-500">2</span><h3 class="font-semibold">Updates</h3><p class="text-slate-600 text-sm">Effective‑dating, retroactive</p></div>
+      <div class="p-4 rounded-2xl border border-slate-200 bg-white"><span class="text-xs font-semibold text-slate-500">3</span><h3 class="font-semibold">Calc Depth</h3><p class="text-slate-600 text-sm">Regular / supplemental / annualize</p></div>
+      <div class="p-4 rounded-2xl border border-slate-200 bg-white"><span class="text-xs font-semibold text-slate-500">4</span><h3 class="font-semibold">Integrations</h3><p class="text-slate-600 text-sm">ERP/HCM + REST/Bulk</p></div>
+      <div class="p-4 rounded-2xl border border-slate-200 bg-white"><span class="text-xs font-semibold text-slate-500">5</span><h3 class="font-semibold">Audit & Security</h3><p class="text-slate-600 text-sm">Lineage, SOC/ISO</p></div>
+    </section>
+
+    <!-- SCORECARD -->
+    <section class="mt-8 bg-white rounded-3xl p-6 md:p-8 shadow-smooth border border-slate-100">
+      <div class="flex items-center justify-between gap-4 flex-wrap">
+        <h2 class="text-2xl font-bold">Options Scorecard</h2>
+        <div class="text-sm text-slate-500">Scale: 1–5 (weighted)</div>
+      </div>
+      <div class="mt-4 overflow-auto">
+        <table class="w-full text-sm">
+          <thead class="sticky-head">
+            <tr class="text-left text-slate-500 border-b">
+              <th class="p-3">Option</th>
+              <th class="p-3">Coverage</th>
+              <th class="p-3">Updates</th>
+              <th class="p-3">Calc</th>
+              <th class="p-3">Integrations</th>
+              <th class="p-3">Effort</th>
+              <th class="p-3">Custom</th>
+              <th class="p-3">Audit</th>
+              <th class="p-3">Security</th>
+              <th class="p-3">Lock‑In</th>
+              <th class="p-3">TCO</th>
+              <th class="p-3">Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">ADP/Symmetry</td>
+              <td class="p-3">5</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td><td class="p-3">4</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:88%"></span></div><div class="text-xs text-right mt-1">4.4</div></td>
+            </tr>
+            <tr class="border-b hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">Workday Payroll (U.S.)</td>
+              <td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">3</td><td class="p-3">3</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:82%"></span></div><div class="text-xs text-right mt-1">4.1</div></td>
+            </tr>
+            <tr class="border-b hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">Oracle Cloud HCM Payroll</td>
+              <td class="p-3">5</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td><td class="p-3">4</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:90%"></span></div><div class="text-xs text-right mt-1">4.5</div></td>
+            </tr>
+            <tr class="border-b hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">Vertex Payroll Tax (SaaS)</td>
+              <td class="p-3">5</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td><td class="p-3">3</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:88%"></span></div><div class="text-xs text-right mt-1">4.4</div></td>
+            </tr>
+            <tr class="border-b hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">Other SaaS (Dayforce/UKG)</td>
+              <td class="p-3">4</td><td class="p-3">4</td><td class="p-3">4</td><td class="p-3">4</td><td class="p-3">3</td><td class="p-3">3</td><td class="p-3">4</td><td class="p-3">5</td><td class="p-3">4</td><td class="p-3">3</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:80%"></span></div><div class="text-xs text-right mt-1">4.0</div></td>
+            </tr>
+            <tr class="hover:bg-cyan-50/50">
+              <td class="p-3 font-semibold">Home‑grown Workflow</td>
+              <td class="p-3">5*</td><td class="p-3">4*</td><td class="p-3">5*</td><td class="p-3">5</td><td class="p-3">2</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">5</td><td class="p-3">4</td>
+              <td class="p-3"><div class="score-pill rounded-full bg-slate-100"><span style="width:90%"></span></div><div class="text-xs text-right mt-1">4.5*</div></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="mt-4 text-slate-600 text-sm">Quick reads: <b>Fastest time‑to‑value</b> — Workday/ADP; <b>Deepest control</b> — Home‑grown; <b>Best in Oracle stack</b> — Oracle Payroll.</div>
+    </section>
+
+    <!-- PROS & CONS CARDS -->
+    <section class="mt-8 grid md:grid-cols-3 gap-6">
+      <div class="rounded-3xl border border-emerald-100 bg-emerald-50 p-6">
+        <h3 class="font-bold flex items-center gap-2 text-emerald-800"><i class="fa-solid fa-circle-check"></i> Home‑grown (Chosen)</h3>
+        <p class="mt-2 text-slate-700"><b>Pros:</b> Transparency, custom overlays, strong auditing, low lock‑in.</p>
+        <p class="text-slate-700"><b>Cons:</b> Content ops burden, mapping work, higher initial build.</p>
+      </div>
+      <div class="rounded-3xl border border-cyan-100 bg-cyan-50 p-6">
+        <h3 class="font-bold flex items-center gap-2 text-cyan-800"><i class="fa-solid fa-robot"></i> ADP/Symmetry</h3>
+        <p class="mt-2 text-slate-700"><b>Pros:</b> Proven tax engine, APIs, reciprocity handling.</p>
+        <p class="text-slate-700"><b>Cons:</b> Licensing/per‑calc costs, partial lock‑in.</p>
+      </div>
+      <div class="rounded-3xl border border-fuchsia-100 bg-fuchsia-50 p-6">
+        <h3 class="font-bold flex items-center gap-2 text-fuchsia-800"><i class="fa-solid fa-cloud"></i> Workday & Oracle</h3>
+        <p class="mt-2 text-slate-700"><b>Pros:</b> Auto updates, deep suite integration, strong controls.</p>
+        <p class="text-slate-700"><b>Cons:</b> Suite tie‑in, configuration effort, portability limits.</p>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE (INLINE SVG) -->
+    <section class="mt-8 bg-white rounded-3xl p-6 md:p-8 shadow-smooth border border-slate-100">
+      <h2 class="text-2xl font-bold mb-4">Target Architecture — Home‑grown Workflow</h2>
+      <div class="overflow-hidden rounded-2xl border border-slate-100">
+        <svg viewBox="0 0 1200 380" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#06b6d4"/>
+              <stop offset="100%" stop-color="#a855f7"/>
+            </linearGradient>
+            <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#22c55e"/>
+              <stop offset="100%" stop-color="#f59e0b"/>
+            </linearGradient>
+          </defs>
+          <!-- Sources -->
+          <rect x="20" y="40" width="220" height="120" rx="18" fill="#ecfeff" stroke="#a5f3fc"/>
+          <text x="40" y="75" font-size="16" font-weight="700" fill="#0e7490">State & Federal Sources</text>
+          <text x="40" y="105" font-size="13" fill="#155e75">Statutes • PDFs • Revenue portals • IRS Circular E</text>
+
+          <!-- ETL -->
+          <rect x="280" y="40" width="260" height="120" rx="18" fill="#f5f3ff" stroke="#e9d5ff"/>
+          <text x="300" y="75" font-size="16" font-weight="700" fill="#6d28d9">ETL Ingestion & Normalization</text>
+          <text x="300" y="105" font-size="13" fill="#4c1d95">PDF→text • table extract • per‑source tests</text>
+
+          <!-- Policy/Calc -->
+          <rect x="570" y="40" width="260" height="120" rx="18" fill="#ecfdf5" stroke="#86efac"/>
+          <text x="590" y="75" font-size="16" font-weight="700" fill="#166534">Policy / Calculation Services</text>
+          <text x="590" y="105" font-size="13" fill="#065f46">Rule DSL • effective‑dating • REST calc API</text>
+
+          <!-- Jurisdiction -->
+          <rect x="860" y="40" width="320" height="120" rx="18" fill="#fff7ed" stroke="#fed7aa"/>
+          <text x="880" y="75" font-size="16" font-weight="700" fill="#9a3412">Jurisdiction Resolver</text>
+          <text x="880" y="105" font-size="13" fill="#7c2d12">Address→tax area • reciprocity • locals</text>
+
+          <!-- Lines -->
+          <path d="M240 100 L280 100" stroke="url(#g1)" stroke-width="4"/>
+          <path d="M540 100 L570 100" stroke="url(#g1)" stroke-width="4"/>
+          <path d="M830 100 L860 100" stroke="url(#g1)" stroke-width="4"/>
+
+          <!-- Stores row -->
+          <rect x="200" y="210" width="260" height="120" rx="18" fill="#eff6ff" stroke="#bfdbfe"/>
+          <text x="220" y="245" font-size="16" font-weight="700" fill="#1d4ed8">Versioned Tax Content Store</text>
+          <text x="220" y="275" font-size="13" fill="#1e40af">JSON/YAML • snapshots • release notes</text>
+
+          <rect x="490" y="210" width="260" height="120" rx="18" fill="#fefce8" stroke="#fde68a"/>
+          <text x="510" y="245" font-size="16" font-weight="700" fill="#a16207">Audit & Lineage</text>
+          <text x="510" y="275" font-size="13" fill="#854d0e">who/what/when/why • diffs • signed releases</text>
+
+          <rect x="780" y="210" width="260" height="120" rx="18" fill="#fdf2f8" stroke="#fecdd3"/>
+          <text x="800" y="245" font-size="16" font-weight="700" fill="#9d174d">Validation & Simulation</text>
+          <text x="800" y="275" font-size="13" fill="#831843">golden tests • cross‑vendor diffs • retro</text>
+
+          <!-- Lines down -->
+          <path d="M700 160 L620 210" stroke="url(#g2)" stroke-width="4"/>
+          <path d="M950 160 L910 210" stroke="url(#g2)" stroke-width="4"/>
+          <path d="M420 160 L330 210" stroke="url(#g2)" stroke-width="4"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- LIFECYCLE & SLAs -->
+    <section class="mt-8 grid md:grid-cols-4 gap-6">
+      <div class="rounded-2xl p-6 border border-slate-200 bg-white"><h3 class="font-semibold">Detect</h3><p class="text-slate-600 text-sm">Bulletins, RSS, release calendar</p></div>
+      <div class="rounded-2xl p-6 border border-slate-200 bg-white"><h3 class="font-semibold">Ingest</h3><p class="text-slate-600 text-sm">Parsers, strict typing, confidence scores</p></div>
+      <div class="rounded-2xl p-6 border border-slate-200 bg-white"><h3 class="font-semibold">Validate</h3><p class="text-slate-600 text-sm">Golden cases, cross‑checks, sign‑off</p></div>
+      <div class="rounded-2xl p-6 border border-slate-200 bg-white"><h3 class="font-semibold">Publish</h3><p class="text-slate-600 text-sm">Versioned packs + notes</p></div>
+    </section>
+    <section class="mt-4 bg-gradient-to-r from-amber-50 via-emerald-50 to-cyan-50 rounded-3xl p-6 border border-slate-100">
+      <div class="grid md:grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl bg-white/70 border border-amber-200">
+          <div class="text-sm text-amber-700 font-semibold">Update SLA</div>
+          <div class="text-2xl font-extrabold">&lt; 24 hours</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/70 border border-emerald-200">
+          <div class="text-sm text-emerald-700 font-semibold">Retro Recompute</div>
+          <div class="text-2xl font-extrabold">&lt; 72 hours</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/70 border border-cyan-200">
+          <div class="text-sm text-cyan-700 font-semibold">Accuracy (tests)</div>
+          <div class="text-2xl font-extrabold">≥ 99.9%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RISKS & MITIGATIONS -->
+    <section class="mt-8 bg-white rounded-3xl p-6 md:p-8 shadow-smooth border border-slate-100">
+      <h2 class="text-2xl font-bold">Risk Register & Mitigations</h2>
+      <ul class="mt-3 grid md:grid-cols-2 gap-3">
+        <li class="p-4 rounded-2xl border border-slate-200"><b>Locality mapping gaps</b> → open + curated geodata; manual overrides.</li>
+        <li class="p-4 rounded-2xl border border-slate-200"><b>Scraper fragility</b> → contract tests; manual upload fallback.</li>
+        <li class="p-4 rounded-2xl border border-slate-200"><b>Regulatory retroactivity</b> → self‑adjust mode; retro runbooks.</li>
+        <li class="p-4 rounded-2xl border border-slate-200"><b>Knowledge concentration</b> → docs; rotations; CI per‑state modules.</li>
+        <li class="p-4 rounded-2xl border border-slate-200"><b>Audit needs</b> → immutable snapshots; signed releases; reproducible calcs.</li>
+      </ul>
+    </section>
+
+    <!-- BUILD PLAN TIMELINE -->
+    <section class="mt-8">
+      <h2 class="text-2xl font-bold">Build Plan</h2>
+      <ol class="mt-3 grid md:grid-cols-5 gap-4 text-sm">
+        <li class="bg-white p-4 rounded-2xl border border-slate-200">
+          <b>Phase 0</b>
+          <p class="text-slate-600">Schema, repo, CI, baseline engine, 3 pilot states</p>
+        </li>
+        <li class="bg-white p-4 rounded-2xl border border-slate-200">
+          <b>Phase 1</b>
+          <p class="text-slate-600">Top 20 states; addr→jurisdiction MVP</p>
+        </li>
+        <li class="bg-white p-4 rounded-2xl border border-slate-200">
+          <b>Phase 2</b>
+          <p class="text-slate-600">Remaining states; city/county locals</p>
+        </li>
+        <li class="bg-white p-4 rounded-2xl border border-slate-200">
+          <b>Phase 3</b>
+          <p class="text-slate-600">SLOs, dashboards, SOC controls, diffing</p>
+        </li>
+        <li class="bg-white p-4 rounded-2xl border border-slate-200">
+          <b>Phase 4</b>
+          <p class="text-slate-600">Sandbox → shadow → cutover</p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-10 mb-12">
+      <div class="rounded-3xl p-6 md:p-8 border border-slate-200 bg-gradient-to-r from-white via-white to-white shadow-smooth">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+          <div>
+            <h3 class="text-xl font-bold">Decision Rationale</h3>
+            <p class="text-slate-600">The home‑grown path aligns with explainable, auditable calculations in insurance, supports custom riders, and avoids suite lock‑in while keeping data strategy first‑class.</p>
+          </div>
+          <button class="px-5 py-3 rounded-xl bg-gradient-to-r from-cyan-500 via-emerald-500 to-amber-400 text-white font-semibold shadow-smooth">
+            Approve Phase 0
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-slate-100 py-8 text-center text-slate-500 text-sm">
+    © 2025 Payroll Withholding Options — Executive Infographic
+  </footer>
+</body>
+</html>
